@@ -13,7 +13,7 @@ export default function TaxFilingPage() {
   return (
     <div className="p-6 space-y-8">
       <div className="space-y-4">
-        <h1 className="text-3xl font-bold">Tax Return Preparation</h1>
+        <h1 className="text-3xl font-bold">Tax Filling</h1>
         <p className="text-teal-200/70">
           Tax Year 2023 • Form 1040 and Schedules
         </p>

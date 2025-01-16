@@ -1,6 +1,6 @@
 "use client";
 
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -19,19 +19,14 @@ import { usePathname } from "next/navigation";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ToggleTheme } from "@/components/ui/ToggleTheme";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fontSans = FontSans({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-sans",
 });
 
 const sidebarItems = [
   { icon: LayoutDashboard, label: "Dashboard", href: "/" },
-  { icon: FileText, label: "Tax Returns", href: "/tax-filing" },
+  { icon: FileText, label: "Tax Filling", href: "/tax-filing" },
   { icon: Calculator, label: "Tax Calculator", href: "/tax-calculator" },
   { icon: Users, label: "Clients", href: "/clients" },
   { icon: Settings, label: "Settings", href: "/settings" },
@@ -49,7 +44,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
       >
         <ThemeProvider
           attribute="class"
@@ -68,29 +66,26 @@ export default function RootLayout({
               <div className="flex h-16 items-center justify-between px-4">
                 <div className="flex items-center gap-2 mt-[60px]">
                   <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
+                    width="27"
+                    height="27"
+                    viewBox="0 0 27 27"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className="text-primary"
                   >
-                    <path
-                      d="M16 2L4 8V24L16 30L28 24V8L16 2Z"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M16 2L28 8L16 14L4 8L16 2Z"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                    <circle cx="13.5" cy="13.5" r="13.5" fill="#2dd4bf" />
+                    <ellipse
+                      cx="13.5"
+                      cy="17"
+                      rx="12.5"
+                      ry="7"
+                      fill="#09090b"
                     />
                   </svg>
-                  <h1 className="text-3xl font-bold">TaxHoa</h1>
+                  <h1 className="text-3xl font-bold text-white">
+                    Tax
+                    <span className="text-teal-400">Hoa</span>
+                  </h1>
                 </div>
                 <Button
                   variant="ghost"
@@ -109,8 +104,8 @@ export default function RootLayout({
                     className={cn(
                       "flex items-center px-4 py-3 text-sm font-medium",
                       pathname === item.href
-                        ? "bg-accent text-accent-foreground"
-                        : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                        ? "bg-teal-900/20 text-teal-600"
+                        : "text-muted-foreground hover:bg-teal-900/10 hover:text-teal-600"
                     )}
                   >
                     <item.icon className="mr-3 h-5 w-5" />
