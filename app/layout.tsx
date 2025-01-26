@@ -13,6 +13,7 @@ import {
   Settings,
   HelpCircle,
   Menu,
+  Box,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -26,10 +27,11 @@ const fontSans = FontSans({
 
 const sidebarItems = [
   { icon: LayoutDashboard, label: "Dashboard", href: "/" },
-  { icon: FileText, label: "Tax Filling", href: "/tax-filing" },
+  { icon: FileText, label: "Tax Filing", href: "/tax-filing" },
   { icon: Calculator, label: "Tax Calculator", href: "/tax-calculator" },
   { icon: Users, label: "Clients", href: "/clients" },
   { icon: Settings, label: "Settings", href: "/settings" },
+  { icon: Box, label: "Integrations", href: "/integrations" },
   { icon: HelpCircle, label: "Help & Support", href: "/support" },
 ];
 
@@ -65,23 +67,33 @@ export default function RootLayout({
             >
               <div className="flex h-16 items-center justify-between px-4">
                 <div className="flex items-center gap-2 mt-[60px]">
-                  <svg
-                    width="27"
-                    height="27"
-                    viewBox="0 0 27 27"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="text-primary"
-                  >
-                    <circle cx="13.5" cy="13.5" r="13.5" fill="#2dd4bf" />
-                    <ellipse
-                      cx="13.5"
-                      cy="17"
-                      rx="12.5"
-                      ry="7"
-                      fill="#09090b"
-                    />
-                  </svg>
+                  <div className="relative size-8">
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="text-teal-400"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                    >
+                      <path
+                        d="M12 1v22M17 5h-4.5m0 0H8m4.5 0V3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M7 9h10M7 13h10M7 17h10"
+                        strokeLinecap="round"
+                      />
+                      <rect
+                        x="4"
+                        y="4"
+                        width="16"
+                        height="16"
+                        rx="2"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </div>
                   <h1 className="text-3xl font-bold text-white">
                     Tax
                     <span className="text-teal-400">Hoa</span>

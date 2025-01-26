@@ -13,7 +13,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Info } from "lucide-react";
 
 export default function TaxCalculatorPage() {
-  const [selectedYear] = useState("2023");
+  const [selectedYear] = useState("2024");
   const [income] = useState({
     wages: 85000,
     selfEmployment: 25000,
@@ -290,7 +290,7 @@ export default function TaxCalculatorPage() {
                 <div className="p-4 rounded-lg bg-teal-900/20 border border-teal-700/20">
                   <h4 className="font-medium mb-2">Retirement Savings</h4>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Saver`&#39;`s Credit
+                    Saver&#39;s Credit
                   </p>
                   <div className="text-xl font-semibold text-teal-600">
                     ${credits.retirement.toLocaleString()}

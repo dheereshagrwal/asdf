@@ -103,19 +103,19 @@ export function DashboardContent() {
                 </TableHeader>
                 <TableBody>
                   <TableRow>
-                    <TableCell>2023-03-15</TableCell>
+                    <TableCell>2024-03-15</TableCell>
                     <TableCell>Quarterly Estimated Tax Payment</TableCell>
                     <TableCell>Payments</TableCell>
                     <TableCell className="text-right">$3,500.00</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>2023-03-10</TableCell>
+                    <TableCell>2024-03-10</TableCell>
                     <TableCell>Charitable Donation</TableCell>
                     <TableCell>Deductions</TableCell>
                     <TableCell className="text-right">$500.00</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>2023-03-01</TableCell>
+                    <TableCell>2024-03-01</TableCell>
                     <TableCell>Freelance Income</TableCell>
                     <TableCell>Income</TableCell>
                     <TableCell className="text-right">$2,800.00</TableCell>

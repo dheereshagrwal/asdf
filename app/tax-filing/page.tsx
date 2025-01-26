@@ -15,7 +15,7 @@ export default function TaxFilingPage() {
       <div className="space-y-4">
         <h1 className="text-3xl font-bold">Tax Filling</h1>
         <p className="text-teal-200/70">
-          Tax Year 2023 • Form 1040 and Schedules
+          Tax Year 2024 • Form 1040 and Schedules
         </p>
       </div>
 
@@ -270,25 +270,25 @@ export default function TaxFilingPage() {
                   <div className="p-4 rounded-lg bg-zinc-800/50">
                     <h4 className="font-medium mb-2">Total Income</h4>
                     <p className="text-2xl font-semibold text-teal-500">
-                      $0.00
+                      $2,730,000.00
                     </p>
                   </div>
                   <div className="p-4 rounded-lg bg-zinc-800/50">
                     <h4 className="font-medium mb-2">Estimated Tax Due</h4>
                     <p className="text-2xl font-semibold text-rose-500">
-                      $0.00
+                      $365,220.00
                     </p>
                   </div>
                   <div className="p-4 rounded-lg bg-zinc-800/50">
                     <h4 className="font-medium mb-2">Total Deductions</h4>
                     <p className="text-2xl font-semibold text-teal-500">
-                      $0.00
+                      $546,000.00
                     </p>
                   </div>
                   <div className="p-4 rounded-lg bg-zinc-800/50">
                     <h4 className="font-medium mb-2">Total Credits</h4>
                     <p className="text-2xl font-semibold text-teal-500">
-                      $0.00
+                      $136,500.00
                     </p>
                   </div>
                 </div>
