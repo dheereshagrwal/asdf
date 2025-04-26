@@ -16,6 +16,7 @@ import {
   Box,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ToggleTheme } from "@/components/ui/ToggleTheme";
@@ -67,37 +68,13 @@ export default function RootLayout({
             >
               <div className="flex h-16 items-center justify-between px-4">
                 <div className="flex items-center gap-2 mt-[60px]">
-                  <div className="relative size-8">
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="text-teal-400"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    >
-                      <path
-                        d="M12 1v22M17 5h-4.5m0 0H8m4.5 0V3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M7 9h10M7 13h10M7 17h10"
-                        strokeLinecap="round"
-                      />
-                      <rect
-                        x="4"
-                        y="4"
-                        width="16"
-                        height="16"
-                        rx="2"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </div>
-                  <h1 className="text-3xl font-bold text-white">
-                    Tax
-                    <span className="text-teal-400">Hoa</span>
-                  </h1>
+                  <Image
+                  src="/logo.svg"
+                  alt="TaxHoa Logo"
+                  width={150}
+                  height={40}
+                  priority
+                  />
                 </div>
                 <Button
                   variant="ghost"
